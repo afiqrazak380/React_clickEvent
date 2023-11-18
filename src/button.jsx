@@ -1,11 +1,13 @@
 // Button function base component
 
-function Button() {
-  const handleClick = (e) => (e.target.textContent = "Why You Click Me 👿");
+import ProfilePic from "./ProfilePic";
 
+function Button() {
   return (
     <>
-      <button onDoubleClick={(e) => handleClick(e)}>Click Me 🥱</button>
+      <button>
+        <ProfilePic></ProfilePic>
+      </button>
     </>
   );
 }

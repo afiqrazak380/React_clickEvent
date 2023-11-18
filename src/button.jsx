@@ -1,13 +1,19 @@
 // Button function base component
 
 function Button() {
-  const handleClick = () => console.log("You summon me 👺"); // with out parameter
-
-  const handleClick2 = (name) => console.log(`You have summon the ${name}`); // with parameter
+  let count = 3; // add condition
+  const handleClick = (name) => {
+    if (count >= 0) {
+      console.log(`Hey! ${name} the count is ${count}`);
+      count--;
+    } else {
+      console.log(`Stop clicking the button ${name}!`);
+    }
+  };
 
   return (
     <>
-      <button onClick={() => handleClick2("Lucifer")}>Click Me 🥱</button>
+      <button onClick={() => handleClick("Lucifer")}>Click Me 🥱</button>
     </>
   );
 }

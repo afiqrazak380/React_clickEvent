@@ -3,11 +3,11 @@
 function ProfilePic() {
   const imgUrl = "./src/assets/profilePic.jpg";
 
-  const handleClick = () => console.log("You click this image!🥸");
+  const handleClick = (e) => (e.target.style.display = "none");
 
   return (
     <>
-      <img onClick={handleClick} src={imgUrl}></img>
+      <img onClick={(e) => handleClick(e)} src={imgUrl}></img>
     </>
   );
 }
